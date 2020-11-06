@@ -34,7 +34,7 @@ def imc_route():
 
 
 def imc_calc(peso: float, altura: float) -> float:
-    return round(100 + peso/altura**2, 2)
+    return round(peso/altura**2, 2)
 
 
 @app.errorhandler(Exception)
