@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %} IMC {% endblock %}
+
+{% block content %}
+
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Calcule seu IMC</h2>
+
+    <form id="imc-form" name="imc-form" action="" method="POST">
+        {{ form.csrf_token }}
+        <div class="md-form mb-4">
+            <label for="inputAltura" class="sr-only">Name</label>
+            <input type="number" step="any" id="inputAltura" name="altura" class="form-control" placeholder="Altura em Metros" required autofocus>
+        </div>
+
+        <div class="md-form">
+            <label for="inputPeso" class="sr-only">Name</label>
+            <input type="number" step="any" id="inputPeso" name="peso" class="form-control" placeholder="Peso em Kg" required autofocus>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Calcular</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title %} IMC {% endblock %}
+
+{% block content %}
+
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Resultado do IMC</h2>
+
+    <table class="table table-light table-borderless">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">IMC</th>
+                <th scope="col">Classificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abaixo de 17</td>
+                <td>Muito abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 17 e 18.49</td>
+                <td>Abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 18.5 e 24.99</td>
+                <td>Peso normal</td>
+            </tr>
+            <tr>
+                <td>Entre 25 e 29.99</td>
+                <td>Acima do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 30 e 34.99</td>
+                <td>Obesidade I</td>
+            </tr>
+            <tr>
+                <td>Entre 35 e 39.99</td>
+                <td>Obesidade II</td>
+            </tr>
+            <tr>
+                <td>Acima de 40</td>
+                <td>Obesidade III (mórbida)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1><span class="badge badge-info">Seu IMC: {{ imc_result }}</span></h1>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %} Internal Error {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-20">
+                <div class="error-template">
+                    <h1>Oops!</h1>
+                    <div class="error-details">
+                        Desculpe, ocorreu algum erro.
+                    </div>
+                    {% if error %}
+                        <h1>{{ error }}</h1>
+                    {% else %}
+                        Iremos verificar o problema, tente novamente e caso persista tente mais tarde.
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
