@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="shortcut icon" href="static/assets/bootstrap-solid.svg"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+      <!-- Custom styles for this template -->
+      <link href="/static/cover.css" rel="stylesheet">
+
+      <title>{% block title %}{% endblock %} - Meu App</title>
+
+    {% endblock %}
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+      <!-- Navbar -->
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand"><a class="nav text-decoration-none" href="/">Meu App</a></h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link active" href="/imc">IMC</a>
+          </nav>
+        </div>
+      </header>
+
+      <!--Content-->
+      <main role="main" class="inner cover">
+        {% block content %}{% endblock %}
+      </main>
+
+      <!--Footer-->
+      <footer class="mastfoot mt-auto">
+        {% block footer %}
+          <div class="inner">
+            <p>&copy; Copyright 2020 by Me, Myself and Hollywood.</p>
+          </div>
+        {% endblock %}
+      </footer>
+
+    </div>
+  </body>
+</html>
